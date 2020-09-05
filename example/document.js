@@ -1,1 +1,0 @@
-function save(e,n){function hasNetwork(online){let on = new Worker("online.js");let off = new Worker("offline.js");if (online){on.postMessage([e,n]);}else{off.postMessage([e,n])}}window.addEventListener("load",()=>{hasNetwork(navigator.onLine);window.addEventListener("online", () => {hasNetwork(true);});window.addEventListener("offline",()=>{hasNetwork(false);});});}
