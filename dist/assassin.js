@@ -25,9 +25,17 @@ class Assassin {
 
         }
         //online - create db
-        create ([key,val]){
-          database.push([key,val])
-          socket.send(JSON.stringify(database));
+        create (key,val){
+
+		obj = {
+		    key: key,
+		    val: val,
+		    // ...other properties
+		  };
+
+		  console.log(obj)
+          // database.push(obj)
+          // socket.send(JSON.stringify(database));
         }
 }
 killer = new Assassin();
