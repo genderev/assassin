@@ -1,41 +1,43 @@
 class Assassin {
-        //online - import db
-        connect (wss) {
-          self.socket = new WebSocket(wss);
-          socket.addEventListener('message', function (event) {
-              console.log('Message from server ', event.data);
-               // self.database = JSON.parse(event.data);
-          });
-        }
 
-        read(){
-          return database
-        }
+    connect(url){
+    self.addr = url.toString()
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, false);
+    xhr.send(null);
+    self.database = JSON.parse(xhr.responseText)
+    }
 
-        update(){
-          //is database an object or array?
-          //get database
-          //needs to understand format of database more
-        }
 
-        delete(key){
-          //get database
-          //if database is JSON:
-          //delete database.key
+    update(k,val){
+    self.len = database.length
+    var key = k;
+      for (var i = 0; i < len; i++) {
+      database[i][key] = val
+      }
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", addr, true);
+    xhr.send(JSON.stringify(database));
+    }
 
-        }
-        //online - create db
-        create (key,val){
+    delete(key){
+      for (var i = 0; i < len; i++) {
+       delete database[i][key]
+      }
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", addr, true);
+      xhr.send(JSON.stringify(database));
+    }
 
-		obj = {
-		    key: key,
-		    val: val,
-		    // ...other properties
-		  };
+    create (k,val){
+    var key = k;
+    var obj = {};
+    obj[key] = val;
+    database.push(obj);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", addr, true);
+    xhr.send(JSON.stringify(database));
+    }
 
-		  console.log(obj)
-          // database.push(obj)
-          // socket.send(JSON.stringify(database));
-        }
 }
 killer = new Assassin();
