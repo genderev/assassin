@@ -37,8 +37,8 @@
 <code>database</code> - Inside a web worker or the main thread, you can always access the database through the variable called <code>database</code>. </li></ul>
 
 <h3> Get Started </h3>
-First, you need to make a <a href="https://fly.io/">fly.io</a> account. 
-<img alt="shell" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/carbon(1).png">
+First, you need to make a <a href="https://fly.io/">fly.io</a> account. If you haven't already installed <a href="https://dev.to/skaytech/docker-fundamentals-2ibi">Docker</a>, <a href="https://docs.docker.com/get-docker/">install it</a> and have the daemon running while you deploy your server. To deploy your server, type this in your terminal and hit "Enter" after the end of each line.
+<img alt="shell" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/carbon(2).png">
 You can also deploy your server to <a href="https://buddy.works">buddy.works</a> or <a href="https://begin.com/">begin.com</a> on your own, if you want.
 
 
