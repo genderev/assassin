@@ -36,6 +36,14 @@
 <li>
 <code>database</code> - Inside a web worker or the main thread, you can always access the database through the variable called <code>database</code>. </li></ul>
 
+<h3> Get Started </h3>
+First, you need to make a <a href="https://fly.io/">fly.io</a> account. 
+<img alt="shell" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/carbon(1).png">
+You can also deploy your server to <a href="https://buddy.works">buddy.works</a> or <a href="https://begin.com/">begin.com</a> on your own, if you want.
+
+
+
+
 <h3>Architecture:</h3>
 
 <ul>
@@ -54,6 +62,8 @@
 <li>My website currently uses the <a href="https://gun.eco/">Gun</a> database.</li> <li> Gun has many features I like and the founder is pretty nice. </li><li> <strong>Gun stopped working for me.</strong></li> 
 <li>Gun's  storage adapter <a href="https://gun.eco/docs/RAD">RAD</a> relies on IndexedDB, which is <strong>disabled in private browsing</strong>. </li><li>Gun syncs data peer to peer through WebRTC, which <strong>doesn't function in web workers.</strong></li>
 <li>Assassin is sort of (seriously, very little) like Gun but for web workers.</li><li> <strong>Gun + worker = Assassin</strong> 💥 </li></ul>
+
+
 
 <h2>
   Demo 🚀 
