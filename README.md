@@ -10,4 +10,4 @@
 <p>Web workers allow you to run multi-threaded JavaScript. When you run JavaScript in parallel to the main thread, the main thread is free to respond to user input. Eliminate render blocking database transactions for good with Assassin. </p>
 <h3> Can you explain web workers with a picture, please? </h3>
 <p> Sure! Look at this visual explanation of web workers. </p>
-<img alt="web worker diagram" src="">
+<img alt="web worker diagram" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/diagram.png">
