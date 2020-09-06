@@ -1,7 +1,6 @@
 <img alt="ASSASSIN" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/assassin.png">
 
 
-<hr>
 
 ![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
 ![GitHub license1](https://img.shields.io/github/languages/top/genderev/assassin)
