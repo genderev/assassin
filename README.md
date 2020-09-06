@@ -11,7 +11,7 @@
 ![GitHub license31](https://img.shields.io/github/issues/genderev/assassin)
 ![GitHub license3](https://img.shields.io/github/issues-pr/genderev/assassin)
 ![GitHub license4](https://img.shields.io/github/contributors/genderev/assassin)
-![GitHub license4](hhttps://img.shields.io/gitter/room/genderev/assassin)
+![GitHudk](https://img.shields.io/gitter/room/genderev/assassin)
 
 
 
