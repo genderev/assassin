@@ -77,7 +77,7 @@
 
 <ul>
 <li>
-<a href="https://github.com/hypercore-protocol/hyperdrive">Hyperdrive</a> - Thanks for syncing data between peers!</li>
+<a href="https://github.com/hypercore-protocol/hyperdrive">Hyperdrive</a> - Thanks for distributed file storage!</li>
 <li>HTML - For creating the web demo</li>
 <li>CSS - For styling the web demo</li>
 <li>JavaScript - For logic</li>
