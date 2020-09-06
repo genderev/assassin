@@ -10,9 +10,9 @@ class Assassin {
 
 
     update(k,val){
-    self.len = database.length
+
     var key = k;
-      for (var i = 0; i < len; i++) {
+      for (var i = 0; i < database.length; i++) {
       database[i][key] = val
       }
     var xhr = new XMLHttpRequest();
@@ -21,7 +21,7 @@ class Assassin {
     }
 
     delete(key){
-      for (var i = 0; i < len; i++) {
+      for (var i = 0; i < database.length; i++) {
        delete database[i][key]
       }
       var xhr = new XMLHttpRequest();
