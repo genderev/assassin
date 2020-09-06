@@ -1,4 +1,4 @@
-<img alt="ASSASSIN" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/assassin.jpeg">
+<img alt="ASSASSIN" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/assassin.png">
 
 
 <hr>
