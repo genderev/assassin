@@ -62,7 +62,7 @@
 
 <h3>Why is it called Assassin?</h3><ul>
 <li>My website currently uses the <a href="https://gun.eco/">Gun</a> database.</li> <li> Gun has many features I like and the founder is pretty nice. </li><li> <strong>Gun stopped working for me.</strong></li> 
-<li>Gun's  storage adapter <a href="https://gun.eco/docs/RAD">RAD</a> relies on IndexedDB, which is <strong>disabled in private browsing</strong>. </li><li>Gun syncs data peer to peer through WebRTC, which <strong>doesn't work in web workers.</strong></li>
+<li>Gun's  storage adapter <a href="https://gun.eco/docs/RAD">RAD</a> relies on IndexedDB, which is <strong>disabled in private browsing</strong>. </li><li>Gun syncs data peer to peer through WebRTC, which <strong>doesn't function in web workers.</strong></li>
 <li>Assassin is sort of (seriously, very little) like Gun but for web workers.</li><li> <strong>Gun + worker = Assassin</strong> 💥 </li></ul>
 
 <h2>
