@@ -12,16 +12,6 @@
 <p>You can see in the diagram that without web workers (that's the "before" part of the picture), the main thread has to finish processing all JavaScript before responding to user input. With the use of web workers (that's the "after" part of the picture), the main thread can send JavaScript to web workers and then focus on updating the UI.</p>
 <img alt="web worker diagram" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/diagram.png">
 
-<p>I wanted to make a database that is:</p>
-
-- Open source
-- Responsive
-- Decentralized
-- Optimized for web workers
-- Designed for private browsing
-
-<strong>That's how Assassin was brought to life.</strong>
-
 <h3>
   Features 💥
 </h3>
