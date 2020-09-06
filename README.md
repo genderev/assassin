@@ -26,7 +26,7 @@
 
 <ul>
 <li>
-<code>killer.connect(url)</code> - Connect to the server. </li>
+  <code>killer.connect(url)</code> - Connect to the server. <code>url</code> refers to the url of the server. You put the server's url into this this function.</li>
 <li>
 <code>killer.create(key,value)</code> - Add an entry to the database.</li>
 <li>
