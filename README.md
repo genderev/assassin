@@ -51,13 +51,14 @@
 <li>
 <code>database</code> - Inside a web worker or the main thread, you can always access the database through the variable called <code>database</code>. </li></ul>
 
-<h3> Get Started </h3>
+<h3> Get Started: Server </h3>
 First, you need to make a <a href="https://fly.io/">fly.io</a> account. If you haven't already installed <a href="https://dev.to/skaytech/docker-fundamentals-2ibi">Docker</a>, <a href="https://docs.docker.com/get-docker/">install it</a> and have the daemon running while you deploy your server. To deploy your server, type this in your <a href="https://www.w3schools.com/whatis/whatis_cli.asp">terminal</a> and hit "Enter" after the end of each line.
 <img alt="shell" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/carbon(2).png">
 You can also deploy your server to <a href="https://buddy.works">buddy.works</a> or <a href="https://begin.com/">begin.com</a> on your own, if you want.
 
+<h3> Get Started: Browser </h3>
 
-
+You can save this <a href="https://raw.githubusercontent.com/genderev/assassin/master/dist/assassin.js">file</a> or you can clone this repo and use <code>assassin.js</code> in the <code>dist</code> folder. <code>assassin.js</code> goes inside the web worker that the main thread posts messages to. You can see an example of how to do this in the source code for the <a href="https://assassin-demo.surge.sh/">demo</a>.
 
 <h3>Architecture:</h3>
 
