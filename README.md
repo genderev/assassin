@@ -9,5 +9,5 @@
 <p> <strong>TL;DR You can outsource JavaScript to web workers. </strong></p>
 <p>Web workers allow you to run multi-threaded JavaScript. When you run JavaScript in parallel to the main thread, the main thread is free to respond to user input. Eliminate render blocking database transactions for good with Assassin. </p>
 <h3> Can you explain web workers with a picture, please? </h3>
-<p> Sure! Look at this visual explanation of web workers. </p>
+<p>You can see in the diagram that without web workers (that's the "before" part of the picture), the main thread has to finish processing all JavaScript before responding to user input. With the use of web workers (that's the "after" part of the picture), the main thread can send JavaScript to web workers and then focus on updating the UI.</p>
 <img alt="web worker diagram" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/diagram.png">
