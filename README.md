@@ -1,7 +1,6 @@
 <img alt="ASSASSIN" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/assassin.jpeg">
 
 
-<p align="center"> A database that hires web workers to kill render blocking operations 🔪</p>
 <hr>
 
 ![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
