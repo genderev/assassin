@@ -1,5 +1,16 @@
 <img alt="ASSASSIN" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/assassin.jpeg">
 
+![GitHub license1](https://img.shields.io/github/languages/top/genderev/assassin)
+
+![GitHub license](https://img.shields.io/github/issues-pr-closed-raw/genderev/assassin)
+
+![GitHub license2](https://img.shields.io/github/languages/code-size/genderev/assassin)
+
+![GitHub license31](https://img.shields.io/github/issues/genderev/assassin)
+
+![GitHub license3](https://img.shields.io/github/issues-pr/genderev/assassin)
+
+
 <p align="center"> A database that hires web workers to kill render blocking operations 🔪</p>
 <hr>
 
