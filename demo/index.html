@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assassin Demo</title>
+    <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+    <style>
+  :root {
+  --dark-blue: darkblue;
+  --black: black;
+  --blue: blue;
+  --grey: grey;
+  --dim-grey: dimgrey;
+  --transform: scale(1.02) translate(0px, 2px) skew(1deg, 0deg);
+  --base-size: 25px;
+  --zero: 0;
+  --two: 2px;
+  --trans: transparent;
+  --twenty-one: 21px;
+  --ten: 10px;
+  --three: 3px;
+  --one: 1px;
+  --twenty-three: 23px
+}
+    @font-face {
+    font-family: baseFont;
+    src: url(Format_1452.woff);
+    }
+
+    body, button, input {
+      font-family: baseFont;
+    }
+
+    button {
+    text-decoration: none;
+    box-shadow: 2px 3px 10px seagreen;
+    border-radius: 10px;
+    border: #8b0000;
+    background-image: linear-gradient(#fff, lavender);;
+    color: black;
+    text-shadow: -2px 0px 18px darkblue;
+    padding: 5px;
+}
+
+button:hover{
+  box-shadow: 2px 3px 20px seagreen;
+
+}
+
+    .title {
+    font-size: 80px;
+    background-image: linear-gradient(45deg,#9404e4, #a8c4b0, #dcbcac, #a468b0);
+    background-size: 100% 15%;
+		background-repeat: repeat-x;
+		background-position: left 0 bottom 20%;
+    }
+p, input, summary, button{
+  font-size: var(--base-size);
+}
+  input{
+  margin-top: var(--zero);
+  margin-bottom: var(--ten);
+  border-radius: var(--two);
+  padding-left: 1px;
+  padding-right: var(--zero);
+  width: 300px;
+  margin-bottom: var(--ten);
+  transition: .5s;
+}
+input:hover {
+		box-shadow: 0 0 5px var(--black);
+		border-radius: var(--three)
+	}
+  #keys, #vals {
+    border: 1px solid black;
+
+  }
+
+  details[open] summary ~ * {
+  animation: open 0.3s ease-in-out;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  font-weight: bold;
+}
+
+    </style>
+  <script>
+  let worker = new Worker("online.js");
+
+</script>
+  </head>
+  <body>
+
+<center><h1> <span class="title">Assassin</span> </h1></center>
+
+<center><p>killer.create<br>
+  <input id="ckey" placeholder="key"></input><br>
+  <input id="cval" placeholder="value"></input>
+  <br><button id="create">create</button></p>
+<p>killer.update<br>
+  <input id="ukey" placeholder="key"></input>
+  <br><input id="uval" placeholder="new value"></input>
+  <br><button id="update">update</button></p>
+<p>killer.delete<br><input id="delkey"placeholder="key"></input>
+  <br><button id="delete">destroy</button></p></center>
+
+<center><div id="add"></div></center>
+
+<script>
+let app = document.getElementById('add')
+worker.onmessage = function (e) {
+window.database = e.data
+display();
+}
+function display(){
+  app.innerHTML=""
+  for (i in database){
+  if (Object.keys(database[i]).toString().length!==0){
+    let det = document.createElement("details");
+    let f = "<summary>"+Object.keys(database[i]).toString()+"</summary>"+"<p>"+Object.values(database[i]).toString()+"</p>"
+    det.innerHTML = f
+    app.append(det)
+    }
+  }
+
+}
+
+function del(key){
+worker.postMessage(["d",document.getElementById('delkey').value])
+}
+
+function create(){
+  worker.postMessage(["c",document.getElementById('ckey').value,document.getElementById('cval').value])
+}
+
+function update(){
+    worker.postMessage(["u",document.getElementById('ukey').value,document.getElementById('uval').value])
+}
+
+document.getElementById('create').addEventListener("click", create);
+document.getElementById('update').addEventListener("click", update);
+document.getElementById('delete').addEventListener("click", del);
+
+
+</script>
+  </body>
+</html>
