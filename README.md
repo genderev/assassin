@@ -14,7 +14,7 @@
 <nav>
   <p><strong>Background</strong></p>
   <ul>
-    <li><a href="#why-database">Why Assassin?</a></li>
+    <li><a href="#why-database">What problem does this solve?</a></li>
      <li><a href="#what-worker">What's a web worker?</a></li>
      <li><a href="#worker-picture">Web Workers Visualized</a></li>
   </ul>
