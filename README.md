@@ -19,9 +19,11 @@
      <li><a href="#worker-picture">Web Workers Visualized</a></li>
   </ul>
   
-  <p><strong>Install</strong></p>
+  <p><strong>Usage</strong></p>
   <ul>
+     <li><a href="#methods">Methods</a></li>
 
+    
    <li><a href="#install-server">Server set up</a></li>
 
   <li><a href="#install-browser">Browser set up</a></li>
@@ -57,7 +59,7 @@
 
 <p>✨&nbsp;<strong> Works in private browsing</strong>: I researched databases like LevelDB, PouchDB, and Gun, which rely on <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> for client-side storage. I wanted these databases to be effective, but I ended up creating this database partly because <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> is disabled in private browsing, which means none of these databases work for me. </p> 
 
-<p><strong>Methods:</strong></p>
+<p id="methods"><strong>Methods:</strong></p>
 
 <ul>
 <li>
