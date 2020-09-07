@@ -93,7 +93,7 @@ You can save this <a href="https://raw.githubusercontent.com/genderev/assassin/m
 
 <ul>
 <li>
-<a href="https://github.com/hypercore-protocol/hyperdrive">Hyperdrive</a> - Thanks for distributed file storage!</li>
+<a href="https://github.com/hypercore-protocol/hyperdrive">Hyperdrive</a> - Thanks for the abstraction layer on top of DAT!</li>
 <li>HTML - For creating the web demo</li>
 <li>CSS - For styling the web demo</li>
 <li>JavaScript - For logic</li>
