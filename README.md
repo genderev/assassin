@@ -56,6 +56,15 @@ First, you need to make a <a href="https://fly.io/">fly.io</a> account. If you h
 <img alt="shell" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/carbon(2).png">
 You can also deploy your server to <a href="https://buddy.works">buddy.works</a> or <a href="https://begin.com/">begin.com</a> on your own, if you want.
 
+You can copy and paste:
+<pre>
+cd /path/to/where_you_want_this_to_be_stored
+git clone https://github.com/genderev/assassin_server.git
+cd assassin_server
+flyctl init
+flyctl deploy
+</pre>
+
 <h3> Get Started: Browser </h3>
 
 You can save this <a href="https://raw.githubusercontent.com/genderev/assassin/master/dist/assassin.js">file</a> or you can clone this repo and use <code>assassin.js</code> in the <code>dist</code> folder. <code>assassin.js</code> goes inside the web worker that the main thread posts messages to. You can see an example of how to do this in the <a href="https://github.com/genderev/assassin/tree/master/demo">source code</a> for the <a href="https://assassin-demo.surge.sh/">demo</a>.
