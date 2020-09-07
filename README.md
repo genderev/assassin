@@ -35,7 +35,7 @@
 
 <p>⚖️&nbsp;<strong> Decentralized</strong>: Your database has no single point of failure. If the server goes down, your data is easy to retrieve. </p>
 
-<p>⚖️&nbsp;<strong> Works in private browsing</strong>: I researched databases like LevelDB, PouchDB, and Gun, which rely on <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> for client-side storage. I wanted these databases to be effective, but I ended up creating this database partly because <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> is disabled in private browsing, which means none of these databases work for me. </p> 
+<p>✨&nbsp;<strong> Works in private browsing</strong>: I researched databases like LevelDB, PouchDB, and Gun, which rely on <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> for client-side storage. I wanted these databases to be effective, but I ended up creating this database partly because <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> is disabled in private browsing, which means none of these databases work for me. </p> 
 
 <p><strong>Methods:</strong></p>
 
