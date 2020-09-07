@@ -36,10 +36,13 @@
 
 <article>
 <h1 id="why-database"> Why do we need a new database? </h1>
-<p> <strong><em>No existing decentralized databases</em> are compatible with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">web workers</a>.</strong> </p>
+<ul><li> <strong><em>No existing decentralized databases</em> are compatible with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">web workers</a>.</strong> </li></ul>
 <h2 id="what-worker"> What are web workers? </h2>
-<p> <strong>You can outsource JavaScript to web workers. </strong></p>
-<p>Web workers allow you to run multi-threaded JavaScript. When you run JavaScript in parallel to the main thread, the main thread is free to respond to user input. Eliminate render blocking database transactions for good with Assassin. </p>
+  <ul>
+<li> <strong>You can outsource JavaScript to web workers. </strong></li>
+    <li>Web workers allow you to run multi-threaded JavaScript.</li> 
+  <li>When you run JavaScript in parallel to the main thread, the main thread is free to respond to user input.  </li>
+    </ul>
 <h3 id="worker-picture"> Can you explain web workers with a picture? </h3>
 <p>You can see in the diagram that without web workers (that's the "before" part of the picture), the main thread has to finish processing all JavaScript before responding to user input. With the use of web workers (that's the "after" part of the picture), the main thread can send JavaScript to web workers and then focus on updating the UI.</p>
 <img alt="web worker diagram" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/diagram.png">
