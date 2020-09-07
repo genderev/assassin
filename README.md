@@ -19,11 +19,11 @@
 
 
 <h1> Why do we need a new database? </h1>
-<p> <strong>TL;DR <em>no existing databases</em> are compatible with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">web workers</a>.</strong> (I've gone to the <a href="https://dbdb.io/">database of databases</a> trying to prove myself wrong.)</p>
+<p> <strong><em>No existing decentralized databases</em> are compatible with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">web workers</a>.</strong> </p>
 <h2> What are web workers? </h2>
-<p> <strong>TL;DR You can outsource JavaScript to web workers. </strong></p>
+<p> <strong>You can outsource JavaScript to web workers. </strong></p>
 <p>Web workers allow you to run multi-threaded JavaScript. When you run JavaScript in parallel to the main thread, the main thread is free to respond to user input. Eliminate render blocking database transactions for good with Assassin. </p>
-<h3> Can you explain web workers with a picture, please? </h3>
+<h3> Can you explain web workers with a picture? </h3>
 <p>You can see in the diagram that without web workers (that's the "before" part of the picture), the main thread has to finish processing all JavaScript before responding to user input. With the use of web workers (that's the "after" part of the picture), the main thread can send JavaScript to web workers and then focus on updating the UI.</p>
 <img alt="web worker diagram" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/diagram.png">
 
@@ -35,7 +35,7 @@
 
 <p>⚖️&nbsp;<strong> Decentralized</strong>: Your database has no single point of failure. If the server goes down, your data is easy to retrieve. </p>
 
-<p>⚖️&nbsp;<strong> Works in private browsing</strong>: I researched databases like LevelDB, PouchDB, and Gun, which rely on <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> for client-side storage. I wanted these databases to be effective, but I ended up creating this database partly because <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> is disabled in private browsing, which means none of these databases work for me. </p> 
+<p>✨&nbsp;<strong> Works in private browsing</strong>: I researched databases like LevelDB, PouchDB, and Gun, which rely on <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> for client-side storage. I wanted these databases to be effective, but I ended up creating this database partly because <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> is disabled in private browsing, which means none of these databases work for me. </p> 
 
 <p><strong>Methods:</strong></p>
 
@@ -54,11 +54,21 @@
 <h3> Get Started: Server </h3>
 First, you need to make a <a href="https://fly.io/">fly.io</a> account. If you haven't already installed <a href="https://dev.to/skaytech/docker-fundamentals-2ibi">Docker</a>, <a href="https://docs.docker.com/get-docker/">install it</a> and have the daemon running while you deploy your server. To deploy your server, type this in your <a href="https://www.w3schools.com/whatis/whatis_cli.asp">terminal</a> and hit "Enter" after the end of each line.
 <img alt="shell" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/carbon(2).png">
-You can also deploy your server to <a href="https://buddy.works">buddy.works</a> or <a href="https://begin.com/">begin.com</a> on your own, if you want.
 
+
+You can copy and paste:
+<pre>
+cd /path/to/where_you_want_this_to_be_stored
+git clone https://github.com/genderev/assassin_server.git
+cd assassin_server
+flyctl init
+flyctl deploy
+</pre>
+
+You can also deploy your server to <a href="https://buddy.works">buddy.works</a> or <a href="https://begin.com/">begin.com</a> on your own, if you want.
 <h3> Get Started: Browser </h3>
 
-You can save this <a href="https://raw.githubusercontent.com/genderev/assassin/master/dist/assassin.js">file</a> or you can clone this repo and use <code>assassin.js</code> in the <code>dist</code> folder. <code>assassin.js</code> goes inside the web worker that the main thread posts messages to. You can see an example of how to do this in the source code for the <a href="https://assassin-demo.surge.sh/">demo</a>.
+You can save this <a href="https://raw.githubusercontent.com/genderev/assassin/master/dist/assassin.js">file</a> or you can clone this repo and use <code>assassin.js</code> in the <code>dist</code> folder. <code>assassin.js</code> goes inside the web worker that the main thread posts messages to. You can see an example of how to do this in the <a href="https://github.com/genderev/assassin/tree/master/demo">source code</a> for the <a href="https://assassin-demo.surge.sh/">demo</a>.
 
 <h3>Architecture:</h3>
 
@@ -81,9 +91,9 @@ You can save this <a href="https://raw.githubusercontent.com/genderev/assassin/m
 
 
 
-<h2>
+<h4>
   Demo 🚀 
-</h2>
+</h4>
 
 <p><a href="https://assassin-demo.surge.sh">https://assassin-demo.surge.sh</a></p>
 
@@ -93,7 +103,7 @@ You can save this <a href="https://raw.githubusercontent.com/genderev/assassin/m
 
 <ul>
 <li>
-<a href="https://github.com/hypercore-protocol/hyperdrive">Hyperdrive</a> - Thanks for distributed file storage!</li>
+<a href="https://github.com/hypercore-protocol/hyperdrive">Hyperdrive</a> - Thanks for the abstraction layer on top of DAT!</li>
 <li>HTML - For creating the web demo</li>
 <li>CSS - For styling the web demo</li>
 <li>JavaScript - For logic</li>
