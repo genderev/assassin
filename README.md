@@ -19,7 +19,7 @@
 
 
 <h1> Why do we need a new database? </h1>
-<p> <strong><em>No existing decentralized databases</em> are compatible with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">web workers</a>.</strong> (I've gone to the <a href="https://dbdb.io/">database of databases</a> trying to prove myself wrong.)</p>
+<p> <strong><em>No existing decentralized databases</em> are compatible with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">web workers</a>.</strong> </p>
 <h2> What are web workers? </h2>
 <p> <strong>You can outsource JavaScript to web workers. </strong></p>
 <p>Web workers allow you to run multi-threaded JavaScript. When you run JavaScript in parallel to the main thread, the main thread is free to respond to user input. Eliminate render blocking database transactions for good with Assassin. </p>
