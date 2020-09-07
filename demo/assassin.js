@@ -8,7 +8,6 @@ class Assassin {
     self.database = JSON.parse(xhr.responseText)
     }
 
-
     update(k,val){
 
     var key = k;
@@ -40,6 +39,5 @@ class Assassin {
     xhr.open("POST", addr, true);
     xhr.send(JSON.stringify(database));
     }
-
 }
 killer = new Assassin();
