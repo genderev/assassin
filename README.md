@@ -18,16 +18,16 @@
 
 
 
-<h1> Why do we need a new database? </h1>
+<h1 id="why-database"> Why do we need a new database? </h1>
 <p> <strong><em>No existing decentralized databases</em> are compatible with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">web workers</a>.</strong> </p>
-<h2> What are web workers? </h2>
+<h2 id="what-worker"> What are web workers? </h2>
 <p> <strong>You can outsource JavaScript to web workers. </strong></p>
 <p>Web workers allow you to run multi-threaded JavaScript. When you run JavaScript in parallel to the main thread, the main thread is free to respond to user input. Eliminate render blocking database transactions for good with Assassin. </p>
-<h3> Can you explain web workers with a picture? </h3>
+<h3 id="worker-picture"> Can you explain web workers with a picture? </h3>
 <p>You can see in the diagram that without web workers (that's the "before" part of the picture), the main thread has to finish processing all JavaScript before responding to user input. With the use of web workers (that's the "after" part of the picture), the main thread can send JavaScript to web workers and then focus on updating the UI.</p>
 <img alt="web worker diagram" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/diagram.png">
 
-<h3>
+<h3 id="features">
   Features 💥
 </h3>
 
@@ -51,7 +51,7 @@
 <li>
 <code>database</code> - Inside a web worker or the main thread, you can always access the database through the variable called <code>database</code>. </li></ul>
 
-<h3> Get Started: Server </h3>
+<h3 id="install-server"> Get Started: Server </h3>
 First, you need to make a <a href="https://fly.io/">fly.io</a> account. If you haven't already installed <a href="https://dev.to/skaytech/docker-fundamentals-2ibi">Docker</a>, <a href="https://docs.docker.com/get-docker/">install it</a> and have the daemon running while you deploy your server. To deploy your server, type this in your <a href="https://www.w3schools.com/whatis/whatis_cli.asp">terminal</a> and hit "Enter" after the end of each line.
 <img alt="shell" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/carbon(2).png">
 
@@ -66,11 +66,11 @@ flyctl deploy
 </pre>
 
 You can also deploy your server to <a href="https://buddy.works">buddy.works</a> or <a href="https://begin.com/">begin.com</a> on your own, if you want.
-<h3> Get Started: Browser </h3>
+<h3 id="install-browser"> Get Started: Browser </h3>
 
 You can save this <a href="https://raw.githubusercontent.com/genderev/assassin/master/dist/assassin.js">file</a> or you can clone this repo and use <code>assassin.js</code> in the <code>dist</code> folder. <code>assassin.js</code> goes inside the web worker that the main thread posts messages to. You can see an example of how to do this in the <a href="https://github.com/genderev/assassin/tree/master/demo">source code</a> for the <a href="https://assassin-demo.surge.sh/">demo</a>.
 
-<h3>Architecture:</h3>
+<h3 id="arch">Architecture:</h3>
 
 <ul>
 
@@ -84,20 +84,20 @@ You can save this <a href="https://raw.githubusercontent.com/genderev/assassin/m
 
 </ul>
 
-<h3>Why is it called Assassin?</h3><ul>
+<h3 id="name">Why is it called Assassin?</h3><ul>
 <li>My website currently uses the <a href="https://gun.eco/">Gun</a> database.</li> <li> Gun has many features I like and the founder is pretty nice. </li><li> <strong>Gun stopped working for me.</strong></li> 
 <li>Gun's  storage adapter <a href="https://gun.eco/docs/RAD">RAD</a> relies on IndexedDB, which is <strong>disabled in private browsing</strong>. </li><li>Gun syncs data peer to peer through WebRTC, which <strong>doesn't function in web workers.</strong></li>
 <li>Assassin is sort of (seriously, very little) like Gun but for web workers.</li><li> <strong>Gun + worker = Assassin</strong> 💥 </li></ul>
 
 
 
-<h4>
+<h4 id="demo">
   Demo 🚀 
 </h4>
 
 <p><a href="https://assassin-demo.surge.sh">https://assassin-demo.surge.sh</a></p>
 
-<h4>
+<h4 id="built-with">
   Built with 🔧
 </h4>
 
@@ -111,7 +111,7 @@ You can save this <a href="https://raw.githubusercontent.com/genderev/assassin/m
 <a href="https://nodejs.org">Node.js</a> - To serve the logic</li>
 </ul>
 
-<h3>Make sure to share your opinion in:</h3>
+<h3 id="connect">Make sure to share your opinion in:</h3>
 
 <ul>
 <li>the Assassin <a href="https://github.com/genderev/assassin/pulls">GitHub pull requests</a>
