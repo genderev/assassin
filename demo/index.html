@@ -96,6 +96,12 @@ summary {
   font-weight: bold;
 }
 
+@media (prefers-color-scheme: dark) {
+body {
+    filter: invert(1) hue-rotate(180deg);
+}
+}
+
     </style>
   <script>
   let worker = new Worker("online.js");
