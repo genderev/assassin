@@ -54,7 +54,7 @@
 <h3> Get Started: Server </h3>
 First, you need to make a <a href="https://fly.io/">fly.io</a> account. If you haven't already installed <a href="https://dev.to/skaytech/docker-fundamentals-2ibi">Docker</a>, <a href="https://docs.docker.com/get-docker/">install it</a> and have the daemon running while you deploy your server. To deploy your server, type this in your <a href="https://www.w3schools.com/whatis/whatis_cli.asp">terminal</a> and hit "Enter" after the end of each line.
 <img alt="shell" src="https://raw.githubusercontent.com/genderev/assassin/master/assets/carbon(2).png">
-You can also deploy your server to <a href="https://buddy.works">buddy.works</a> or <a href="https://begin.com/">begin.com</a> on your own, if you want.
+
 
 You can copy and paste:
 <pre>
@@ -65,6 +65,7 @@ flyctl init
 flyctl deploy
 </pre>
 
+You can also deploy your server to <a href="https://buddy.works">buddy.works</a> or <a href="https://begin.com/">begin.com</a> on your own, if you want.
 <h3> Get Started: Browser </h3>
 
 You can save this <a href="https://raw.githubusercontent.com/genderev/assassin/master/dist/assassin.js">file</a> or you can clone this repo and use <code>assassin.js</code> in the <code>dist</code> folder. <code>assassin.js</code> goes inside the web worker that the main thread posts messages to. You can see an example of how to do this in the <a href="https://github.com/genderev/assassin/tree/master/demo">source code</a> for the <a href="https://assassin-demo.surge.sh/">demo</a>.
@@ -90,9 +91,9 @@ You can save this <a href="https://raw.githubusercontent.com/genderev/assassin/m
 
 
 
-<h2>
+<h4>
   Demo 🚀 
-</h2>
+</h4>
 
 <p><a href="https://assassin-demo.surge.sh">https://assassin-demo.surge.sh</a></p>
 
