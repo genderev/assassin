@@ -12,9 +12,11 @@ class Assassin {
     update(k,val){
 
     var key = k;
-      for (var i = 0; i < database.length; i++) {
+    for (var i = 0; i < database.length; i++) {
+      if(Object.keys(database[i])==key){
       database[i][key] = val
       }
+    }
     var xhr = new XMLHttpRequest();
     xhr.open("POST", addr, true);
     xhr.send(JSON.stringify(database));
