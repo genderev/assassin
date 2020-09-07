@@ -11,13 +11,30 @@
 ![GitHub license4](https://img.shields.io/github/contributors/genderev/assassin)
 ![GitHudk](https://img.shields.io/gitter/room/genderev/assassin)
 
+<nav>
+  <p><strong>Background</strong></p>
+  <ul>
+    <li><a href="#why-database">Why Assassin?</a></li>
+     <li><a href="#what-worker">What's a web worker?</a></li>
+     <li><a href="#worker-picture">Web Workers Visualized</a></li>
+  </ul>
+  
+  <p><strong>Install</strong></p>
+  <ul>
+
+   <li><a href="#install-server">Server set up</a></li>
+
+  <li><a href="#install-browser">Browser set up</a></li>
+  </ul>
+  
+  
+</nav>
 
 
 
 
 
-
-
+<article>
 <h1 id="why-database"> Why do we need a new database? </h1>
 <p> <strong><em>No existing decentralized databases</em> are compatible with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">web workers</a>.</strong> </p>
 <h2 id="what-worker"> What are web workers? </h2>
@@ -140,4 +157,5 @@ You can save this <a href="https://raw.githubusercontent.com/genderev/assassin/m
 
 </ul>
 
-<p>Star the repo, <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fgenderev%2Fassassin&text=Assassin%20works%20to%20kill%20slow%20database%20transactions.">Tweet</a>, and share among your friends, teams and contacts! 
+<p>Star the repo, <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fgenderev%2Fassassin&text=Assassin%20works%20to%20kill%20slow%20database%20transactions.">Tweet</a>, and share among your friends, teams and contacts! </p>
+</article>
