@@ -1,6 +1,7 @@
 importScripts('assassin.js')
 
-killer.connect("https://dark-frost-473.fly.dev");
+killer.connect("https://your-server.fly.dev");
+// ^ Create a fly.io server so you can see this demo! ^
 
 self.postMessage(database)
 
