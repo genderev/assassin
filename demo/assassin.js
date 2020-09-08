@@ -1,12 +1,14 @@
 class Assassin {
 
     connect(url){
-    self.addr = url.toString()
+    self.addr = new URL(url)
+    self.write = (addr + "write").toString()
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, false);
+    xhr.open("POST", url, false);
     xhr.send(null);
     self.database = JSON.parse(xhr.responseText)
     }
+
 
     update(k,val){
 
@@ -17,7 +19,7 @@ class Assassin {
       }
     }
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", addr, true);
+    xhr.open("POST", write, true);
     xhr.send(JSON.stringify(database));
     }
 
@@ -26,7 +28,7 @@ class Assassin {
        delete database[i][key]
       }
       var xhr = new XMLHttpRequest();
-      xhr.open("POST", addr, true);
+      xhr.open("POST", write , true);
       xhr.send(JSON.stringify(database));
     }
 
@@ -36,8 +38,9 @@ class Assassin {
     obj[key] = val;
     database.push(obj);
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", addr, true);
+    xhr.open("POST", write, true);
     xhr.send(JSON.stringify(database));
     }
+
 }
 killer = new Assassin();

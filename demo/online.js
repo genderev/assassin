@@ -1,8 +1,6 @@
 importScripts('assassin.js')
 
 killer.connect("https://dark-frost-473.fly.dev");
-// ⬆︎ DO NOT USE THIS SERVER IN PRODUCTION! This is a test server made for the demo. ⬆
-
 
 self.postMessage(database)
 

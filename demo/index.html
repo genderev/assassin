@@ -22,38 +22,34 @@
   --one: 1px;
   --twenty-three: 23px
 }
-    @font-face {
+@font-face {
     font-family: baseFont;
     src: url(Format_1452.woff);
-    }
-
-    body, button, input {
-      font-family: baseFont;
-    }
-
-    button {
-    text-decoration: none;
-    box-shadow: 2px 3px 10px seagreen;
-    border-radius: 10px;
-    border: #8b0000;
-    background-image: linear-gradient(#fff, lavender);;
-    color: black;
-    text-shadow: -2px 0px 18px darkblue;
-    padding: 5px;
+  }
+body, button, input {
+    font-family: baseFont;
 }
-
+button {
+  text-decoration: none;
+  box-shadow: 2px 3px 10px seagreen;
+  border-radius: 10px;
+  border: #8b0000;
+  background-image: linear-gradient(#fff, lavender);;
+  color: black;
+  text-shadow: -2px 0px 18px darkblue;
+  padding: 5px;
+}
 button:hover{
   box-shadow: 2px 3px 20px seagreen;
 
 }
-
-    .title {
-    font-size: 80px;
-    background-image: linear-gradient(45deg,#9404e4, #a8c4b0, #dcbcac, #a468b0);
-    background-size: 100% 15%;
-		background-repeat: repeat-x;
-		background-position: left 0 bottom 20%;
-    }
+.title {
+  font-size: 80px;
+  background-image: linear-gradient(45deg,#9404e4, #a8c4b0, #dcbcac, #a468b0);
+  background-size: 100% 15%;
+  background-repeat: repeat-x;
+  background-position: left 0 bottom 20%;
+}
 p, input, summary, button{
   font-size: var(--base-size);
 }
@@ -71,37 +67,19 @@ input:hover {
 		box-shadow: 0 0 5px var(--black);
 		border-radius: var(--three)
 	}
-  #keys, #vals {
-    border: 1px solid black;
-
-  }
-
-  details[open] summary ~ * {
-  animation: open 0.3s ease-in-out;
-}
-
-@keyframes open {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-details summary::-webkit-details-marker {
-  display: none;
-}
 
 summary {
   font-weight: bold;
 }
 
+hr {
+  width: 400px;
+}
 @media (prefers-color-scheme: dark) {
 body {
     filter: invert(1) hue-rotate(180deg);
 }
 }
-
     </style>
   <script>
   let worker = new Worker("online.js");
@@ -122,7 +100,7 @@ body {
   <br><button id="update">update</button></p>
 <p>killer.delete<br><input id="delkey"placeholder="key"></input>
   <br><button id="delete">destroy</button></p></center>
-
+<hr>
 <center><div id="add"></div></center>
 
 <script>
@@ -146,14 +124,19 @@ function display(){
 
 function del(key){
 worker.postMessage(["d",document.getElementById('delkey').value])
+ window.scrollBy(0, 100)
 }
 
 function create(){
   worker.postMessage(["c",document.getElementById('ckey').value,document.getElementById('cval').value])
+  window.scrollBy(0, 400)
+
 }
+
 
 function update(){
     worker.postMessage(["u",document.getElementById('ukey').value,document.getElementById('uval').value])
+    window.scrollBy(0, 100)
 }
 
 document.getElementById('create').addEventListener("click", create);
