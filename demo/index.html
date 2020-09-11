@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Assassin Demo</title>
     <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
     <style>
@@ -109,19 +111,17 @@ worker.onmessage = function (e) {
 window.database = e.data
 display();
 }
+var frag = document.createDocumentFragment()
 function display(){
   app.innerHTML=""
-  for (i in database){
-  if (Object.keys(database[i]).toString().length!==0){
+  for (var i=0;i<Object.keys(database).length;i++){
     let det = document.createElement("details");
-    let f = "<summary>"+Object.keys(database[i]).toString()+"</summary>"+"<p>"+Object.values(database[i]).toString()+"</p>"
+    let f = "<summary>"+Object.keys(database)[i].toString()+"</summary>"+"<p>"+Object.values(database)[i].toString()+"</p>"
     det.innerHTML = f
-    app.append(det)
-    }
+    frag.append(det)
   }
-
+app.append(frag)
 }
-
 function del(key){
 worker.postMessage(["d",document.getElementById('delkey').value])
  window.scrollBy(0, 100)
@@ -142,7 +142,6 @@ function update(){
 document.getElementById('create').addEventListener("click", create);
 document.getElementById('update').addEventListener("click", update);
 document.getElementById('delete').addEventListener("click", del);
-
 
 </script>
   </body>

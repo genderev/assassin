@@ -9,7 +9,7 @@ app.use(cors())
 app.use(bodyParser.text());
 
 
-drive.writeFile('/data.txt', JSON.stringify([{'Thanks': 'Visit gitter.im/assassindb for help!'}]), function (err) {
+drive.writeFile('/data.txt', JSON.stringify({Thanks:"Visit gitter.im/assassindb for help!"}), function (err) {
   if (err) {throw err}
 })
 
@@ -21,7 +21,6 @@ app.get('/', function (req, res) {
 
 app.post('/', function (req, res) {
   drive.readFile('/data.txt', 'utf-8', function (err, data) {
-    if (err) {throw err};
     res.send(data)
   })
 
