@@ -145,7 +145,6 @@ You can save this <a href="https://raw.githubusercontent.com/genderev/assassin/m
 <p>And if you really want to help make Assassin better, make a <a href="https://github.com/genderev/assassin/pulls">pull request</a>! I really want to Assassin to have these things, so make a <a href="https://github.com/genderev/assassin/pulls">pull request</a> showing how to add them:</p>
 <ul>
   <li> User authentication </li>
-  <li> Server encryption </li>
  </ul>
  
 
