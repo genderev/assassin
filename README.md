@@ -71,7 +71,7 @@
 <li>
 <code>killer.delete(key)</code> - Delete an entry in the database.</li>
 <li>
-<code>database</code> - Inside a web worker or the main thread, you can always access the database through the variable called <code>database</code>. </li></ul>
+<code>database</code> - Inside the main thread, you can always access the database through the variable called <code>database</code>. </li></ul>
 
 <h3 id="install-server"> Get Started: Server </h3>
 First, you need to make a <a href="https://fly.io/">fly.io</a> account. If you haven't already installed <a href="https://dev.to/skaytech/docker-fundamentals-2ibi">Docker</a>, <a href="https://docs.docker.com/get-docker/">install it</a> and have the daemon running while you deploy your server. To deploy your server, type this in your <a href="https://www.w3schools.com/whatis/whatis_cli.asp">terminal</a> and hit "Enter" after the end of each line.
